@@ -13,8 +13,11 @@ def flip(p):
     return np.random.random() < p
 
 
-def gen_ER_graph(n, p):
-    """ all possible edges have p probability of manifesting """
+def gen_ER_graph(n, p, alt=False):
+    """ all possible edges have p probability of manifesting. Alternative method
+        addes exactly n^2 * p edges randomly
+    """
+
     def random_pairs(nodes, p):
         for i, u in enumerate(nodes):
             for j, v in enumerate(nodes):
@@ -24,7 +27,19 @@ def gen_ER_graph(n, p):
     G = nx.Graph()
     nodes = range(n)
     G.add_nodes_from(nodes)
-    G.add_edges_from(random_pairs(nodes, p))
+    if alt:
+        m = int(n * (n - 1) * p)
+        edges = set()
+        for _ in range(m):
+            while True:
+                edge = np.random.randint(0, n), np.random.randint(0, n)
+                if edge[0] != edge[1] and not edge in edges:
+                    edges.add(edge)
+                    break
+    else:
+        edges = random_pairs(nodes, p)
+
+    G.add_edges_from(edges)
     return G
 
 

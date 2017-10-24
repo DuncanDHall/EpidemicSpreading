@@ -4,22 +4,10 @@
 
 ### Abstract
 
-How prevalent is epidemic spreading in various network topologies? What is the survival probability of viruses over a range of time? We answer these questions by replicating an experiment by Pastor-Satorras and Vespignani [1] which involves running the susceptible-infected-susceptible (SIS) model in Barabasi and Albert's (BA) power law graph. We apply their methodology on varying network topologies including the Erdos-Renyi graph (ER), Watts and Strogatz (WS) graph, and Facebook dataset (SNAP) to further investigate the validity of their model on varying network topologies. We show that viruses with any spreading rate reach a steady state of prevalence on scale-free networks. We conclude that scale-free networks are prone to epidemic spreading regardless of the spreading rate, while non-scale-free networks yield either persistent or zero infection.
-
 
 ### Replication of Pastor-Satorras and Vespignani's experiment
 
-Pastor-Satorras and Vespignani originally asks the question "why do epidemic spreading models with local connectivity contradict with the statistical observations of virus epidemics that viruses are able to pervade and spread much slow than exponentially, and saturate to a low level of persistence?" [1]. After observing and analyzing data reported by virus Bulletin, they claim that previous spreading models which involves graphs with local connectivity like ER graph and WS graph don't illustrate the scale-free nature of the real world networks such as the Internet. While looking for an explanation and designing a model that represents the real world, they hypothesize that running SIS model simulation on Barabasi and Albert's graph will illustrate the exponential tail of virus prevalence.
 
-To find how prevalent epidemic spreading is in various network topologies, we replicate both the experiment that they explicitly conducted with BA graph and the experiments with ER and WS graphs that they did not demonstrate in their paper.
-
-We use the the susceptible-infected-susceptible (SIS) epidemic model as our primary means of simulation. In SIS model, an infected node recovers with probability (rate) σ, and susceptible nodes are infected if at least one neighbor is infected with probability (rate) µ. We define the spreading rate λ = µ/σ. We are able to fix σ = 1 without loss of generality [1]. Note that updating the status of all nodes is done in parallel; that is, to update the status for time t, only statuses of time (t-1) of the nodes are considered.
-
-We define a list of terms for our experiments. Virus prevalence 'ρ' is the fraction of infected nodes at any time. In this experiment examine the prevalence only when the simulation enters a steady sate with a constant fraction of infected nodes. We evaluate the virus's steady-state prevalence 'ρ' by calculating the mean of infected nodes at time step t over multiple trials (n = 10). Surviving probability P<sub>s</sub>(t) is defined as the ratio of trials where the virus is still alive at time step t after their birth to total number of trials conducted.
-
-We use a BA graph generated from the NetworkX's `barabasi_albert_graph(n, k)` function. We set the number of edges to attach from a new node to existing nodes k = 3, providing an average node degree of 6. We use the number of nodes N ranging from 10<sup>3</sup> to 8.5×10<sup>6</sup>.
-
-We show the results of our simulation in Figure 1.2 and Figure 2.2 in comparison to the original plots [1] in Figure 1.1 and Figure 1.2 respectively. We illustrate that viruses with spreading rate ranging from 1/22 to 1/7 reach a steady state of prevalence `ρ ~ exp(-C/λ)` on the BA graph as shown in both Figure 1.1 and Figure 1.2. We run 100,000 trials to replicate Figure 2.1 up to 50 time steps as shown in Figure 2.2.
 
 <center>
 
@@ -53,12 +41,8 @@ exponential behavior, following a sharp initial drop, is compatible with the dat
 
 ### Going Beyond : SIS model simluation on ER, WS, Facebook network
 
-We are still in the process of replicating plots for ER and WS graphs. We notice that even in ER and WS graphs, the virus prevalence reaches a steady state without rapidly converging to either full infection or no infection as opposed to our original hypotehsis. We observe that running the same simulation on the Facebook data yields the results shown in Figure 3.
-
-<br>
 
 ![Figure 3](https://github.com/SeunginLyu/EpidemicSpreading/blob/master/resources/figure3.png)
-
 <br>
 *Figure 3. We run the SIS model simulation on the Facebook data provided by SNAP. We observe qualitatively semi-logarithmically linear graph as in Figure 1.1 and Figure 1.2 but quantitatively the prevalence is higher in this plot.*
 
