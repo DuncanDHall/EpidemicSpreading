@@ -4,6 +4,8 @@
 
 ### Abstract
 
+Viral spreading through computer networks is an area in epidemiology especially suited for modeling do to the relatively simple mechanisms of this kind of epidemic. We challenge the findings of Pastor-Satorras and Vespignani (2001) who claim that the spreading behavior of a virus is qualitatively different in scale-free networks like those of a Barabási–Albert model and networks created according to the Erdős–Rényi or Watts-Strogatz models. No strong conclusions are made, but we suspect the presence of a critical spreading rate in BA graphs which is similarly size dependent as in ER and ES models.
+
 
 ### Replication of Pastor-Satorras and Vespignani's experiment
 
