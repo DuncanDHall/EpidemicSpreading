@@ -34,8 +34,10 @@ In other words, a virus with any spreading rate λ will persist in a suitably la
 
 <center>
 <br>
+
 | ![ER size dependence](../resources/er_survival3.png) | ![WS size dependence](../resources/ws_survival3.png) | ![BA size dependence](../resources/ba_survival3.png) |
 |-|-|-|
+
 <br>
 *Figure 2 – λ<sub>c</sub> is dependent on network size for all three topologies. Parameters are identical to Figure 1 with each topology tested at n = 2500 (blue), n = 5000 (purple), and n = 10000 (red). According to Pastor-Satorras and Vespignani we should expect variance in survival with network size only in the BA model.*
 <br>
@@ -43,8 +45,10 @@ In other words, a virus with any spreading rate λ will persist in a suitably la
 
 <center>
 <br>
+
 | ![ER and BA Size Behavior](../resources/er_vs_ba_size_comp.png) | ![ER and BA Size Behavior (alt view)](../resources/er_vs_ba_size_comp2.png) |
 |-|-|
+
 <br>
 *Figure 3 – Compares ER (red) and BA (green) steady-state infection fractions as size scales. Circles are individual trial states, X's mark mean averages. Models do not appear qualitatively different (see alternate view on right).*
 <br>
