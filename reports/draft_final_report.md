@@ -19,10 +19,14 @@ Because the simulation is not meant to reflect on any particular time scale, the
 
 <center>
 <br>
+  
 | ![ER survival criticality](../resources/er_survival.png) | ![WS survival criticality](../resources/ws_survival.png) | ![BA survival criticality](../resources/ba_survival.png) |
 |-|-|-|
+
 <br>
+
 *Figure 1 – Criticality of virus survival on λ for multiple topologies. For each value of λ we count the fraction of 40 trials in which the virus survives to time step t = 100.*
+
 </center>
 <br>
 
@@ -34,19 +38,27 @@ In other words, a virus with any spreading rate λ will persist in a suitably la
 
 <center>
 <br>
+
 | ![ER size dependence](../resources/er_survival3.png) | ![WS size dependence](../resources/ws_survival3.png) | ![BA size dependence](../resources/ba_survival3.png) |
 |-|-|-|
+
 <br>
+
 *Figure 2 – λ<sub>c</sub> is dependent on network size for all three topologies. Parameters are identical to Figure 1 with each topology tested at n = 2500 (blue), n = 5000 (purple), and n = 10000 (red). According to Pastor-Satorras and Vespignani we should expect variance in survival with network size only in the BA model.*
+
 <br>
 </center>
 
 <center>
 <br>
+
 | ![ER and BA Size Behavior](../resources/er_vs_ba_size_comp.png) | ![ER and BA Size Behavior (alt view)](../resources/er_vs_ba_size_comp2.png) |
 |-|-|
+
 <br>
+
 *Figure 3 – Compares ER (red) and BA (green) steady-state infection fractions as size scales. Circles are individual trial states, X's mark mean averages. Models do not appear qualitatively different (see alternate view on right).*
+
 <br>
 </center>
 
@@ -57,40 +69,57 @@ As validation, we can recreate the data presented by Pastor-Satorras and Vespign
 #### Figures Replicating Pastor-Satorras and Vespignani
 
 <center>
+  
 ![Figure 11](../resources/figure11.png)
+
 <br>
+
 *Figure 4.1. "Persistence ρ as a function of 1/λ for different network sizes: N = 10<sup>5</sup> (+), N = 5 × 10<sup>5</sup>
 (◻), N = 10<sup>6</sup> (×), N = 5 × 10<sup>6</sup> (○), and N = 8.5 × 10<sup>6</sup> (◇). The linear behavior on the
 semi-logarithmic scale proves the stretched exponential behavior predicted for ρ. The full line is a
 fit to the form ρ ∼ exp(−C/λ)." [1]*
+
 <br>
 
 
 ![Figure 1](../resources/figure1.png)
+
 <br>
+
 *Figure 4.2. We quantitatively replicate the original plot shown in Figure 4.1 with each color corresponding to a network size in the original experiment. We confirm that the persistence ρ is indeed semi-logarithmically linear.*
+
 <br>
+
 </center>
 
 We can even plot the same relation in ER topologies:
 
 <center>
+
 ![Persistence Relation ER Topologies](../resources/persistance_relation_er.png)
+
 <br>
+
 *Figure 4.2. We quantitatively replicate the original plot shown in Figure 4.1 with each color corresponding to a network size in the original experiment. We confirm that the persistence ρ is indeed semi-logarithmically linear.*
+
 <br>
 
 ![Figure 21](../resources/figure21.png)
+
 <br>
+
 *Figure 5.1. a) "Surviving probability P<sub>s</sub>(t) for a spreading rate λ = 0.065 in scale-free networks of
-size N = 5 × 10<sup>5</sup> (◻), N = 2.5 × 10<sup>4</sup> (◇), N = 1.25 × 10<sup>4</sup> (△), and N = 6.25 × 10<sup>3</sup> (○). The
-exponential behavior, following a sharp initial drop, is compatible with the data analysis of Figure 4.1" [1]*
+size N = 5 × 10<sup>5</sup> (◻), N = 2.5 × 10<sup>4</sup> (◇), N = 1.25 × 10<sup>4</sup> (△), and N = 6.25 × 10<sup>3</sup> (○). The exponential behavior, following a sharp initial drop, is compatible with the data analysis of Figure 4.1" [1]*
+
 <br>
 
 
 ![Figure 2](../resources/figure22.png)
+
 <br>
+
 *Figure 5.2. We qualitatively replicate the original plot shown in Figure 5.1. Note that we run the simulation for 50 time steps due to time complexity.*
+
 <br>
 
 </center>
