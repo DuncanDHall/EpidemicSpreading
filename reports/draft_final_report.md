@@ -61,7 +61,9 @@ As validation, we can recreate the data presented by Pastor-Satorras and Vespign
 #### Figures Replicating Pastor-Satorras and Vespignani
 
 <center>
+  
 ![Figure 11](../resources/figure11.png)
+
 <br>
 *Figure 4.1. "Persistence ρ as a function of 1/λ for different network sizes: N = 10<sup>5</sup> (+), N = 5 × 10<sup>5</sup>
 (◻), N = 10<sup>6</sup> (×), N = 5 × 10<sup>6</sup> (○), and N = 8.5 × 10<sup>6</sup> (◇). The linear behavior on the
@@ -71,20 +73,25 @@ fit to the form ρ ∼ exp(−C/λ)." [1]*
 
 
 ![Figure 1](../resources/figure1.png)
+
 <br>
 *Figure 4.2. We quantitatively replicate the original plot shown in Figure 4.1 with each color corresponding to a network size in the original experiment. We confirm that the persistence ρ is indeed semi-logarithmically linear.*
 <br>
+
 </center>
 
 We can even plot the same relation in ER topologies:
 
 <center>
+
 ![Persistence Relation ER Topologies](../resources/persistance_relation_er.png)
+
 <br>
 *Figure 4.2. We quantitatively replicate the original plot shown in Figure 4.1 with each color corresponding to a network size in the original experiment. We confirm that the persistence ρ is indeed semi-logarithmically linear.*
 <br>
 
 ![Figure 21](../resources/figure21.png)
+
 <br>
 *Figure 5.1. a) "Surviving probability P<sub>s</sub>(t) for a spreading rate λ = 0.065 in scale-free networks of
 size N = 5 × 10<sup>5</sup> (◻), N = 2.5 × 10<sup>4</sup> (◇), N = 1.25 × 10<sup>4</sup> (△), and N = 6.25 × 10<sup>3</sup> (○). The
@@ -93,6 +100,7 @@ exponential behavior, following a sharp initial drop, is compatible with the dat
 
 
 ![Figure 2](../resources/figure22.png)
+
 <br>
 *Figure 5.2. We qualitatively replicate the original plot shown in Figure 5.1. Note that we run the simulation for 50 time steps due to time complexity.*
 <br>
