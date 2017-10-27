@@ -1,5 +1,5 @@
 # Simulation of Epidemic Spreading in Various Network Topologies
-## by Duncan Hall and Seungin Lyu
+## by Duncan Hall
 
 
 ### Abstract
@@ -7,7 +7,28 @@
 
 ### Replication of Pastor-Satorras and Vespignani's experiment
 
+Replicating the simulations of Pastor-Satorras and Vespignani, we used a SIS virus model where each node has two possible states: susceptible or infected. Once infected and recovered a node is once again susceptible to the simulated virus (with no immunity). We tested the simulation with graph topologies from three different models: [Erdős–Rényi](https://en.wikipedia.org/wiki/Erdős–Rényi_model), [Watts-Strogatz](https://en.wikipedia.org/wiki/Watts–Strogatz_model), and [Barabási–Albert](https://en.wikipedia.org/wiki/Barabási–Albert_model). The simulation was run in discrete time steps after each of which a node's state was determined as follows:
 
+  - infected nodes recover to susceptible with probability δ
+  - susceptible nodes with no infected neighbors remain susceptible
+  - susceptible nodes with one or more infected neighbors become infected with probability ν
+
+Because the simulation is not meant to reflect on any particular time scale, the behavior of the simulation depends only on the ratio λ = ν / δ. We can therefore fix δ = 1 guaranteeing that infected nodes will recover in exactly one time step. Despite the simplicity of this model it manifests a core concept in epidemiology: the notion of a critical viral spreading rate λ<sub>c</sub> in any network. In simulations where λ < λ<sub>c</sub>, we observe the virus dying out after a short period while where λ > λ<sub>c</sub>, we see the virus becoming endemic, reaching most of the nodes of the network in short order and surviving indefinitely. Figure 1 below illustrates the criticality of λ across the three topologies considered.
+
+<center>
+![ER survival criticality](../resources/er_survival.png) ![WS survival criticality](../resources/ws_survival.png) ![BA survival criticality](../resources/ba_survival.png)
+*Figure 1 – Criticality of virus survival on λ for multiple topologies. For each value of λ we count the fraction of 40 trials in which the virus survives to time step t = 100.*
+<br>
+</center>
+
+For any network there exists a λ<sub>c</sub>
+
+
+
+
+<br><br>
+
+#### Figures Replicating Pastor-Satorras and Vespignani
 
 <center>
 
