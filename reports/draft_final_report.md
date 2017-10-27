@@ -17,8 +17,10 @@ Because the simulation is not meant to reflect on any particular time scale, the
 
 <center>
 <br>
+  
 | ![ER survival criticality](../resources/er_survival.png) | ![WS survival criticality](../resources/ws_survival.png) | ![BA survival criticality](../resources/ba_survival.png) |
 |-|-|-|
+
 <br>
 *Figure 1 – Criticality of virus survival on λ for multiple topologies. For each value of λ we count the fraction of 40 trials in which the virus survives to time step t = 100.*
 </center>
